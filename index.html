@@ -13,33 +13,141 @@
 [[Let&#39;s get started|start]]</tw-passagedata><tw-passagedata pid="2" name="start" tags="" position="75,200" size="100,100">You will be playing as [[Taylor]], a non-binary student who was born and raised in a traditional Evangelical family.
 [[Let&#39;s go]]
 </tw-passagedata><tw-passagedata pid="3" name="Taylor" tags="" position="25,325" size="100,100">Taylor (they/them) is in their senior year of college. They enjoy cooking, reading, and skateboarding. They work as a barista part time at a local cafe, and are secretary for their school&#39;s [[GSP]].
-[[Back|start]]</tw-passagedata><tw-passagedata pid="4" name="Evangelical" tags="" position="150,325" size="100,100">This Chrisitan denomination is defined as &quot;&quot;
-[[Back|start]]</tw-passagedata><tw-passagedata pid="5" name="Riley" tags="" position="350,325" size="100,100">Riley is your best friend. They&#39;re also in [[GSP]], as the treasurer. You met in an intro biology class, and have been inseperable since. Riley now works with you at the coffee shop.</tw-passagedata><tw-passagedata pid="6" name="GSP" tags="" position="225,450" size="100,100">The Gay-Straight Partnership is one of the biggest clubs on campus. You really enjoy helping the club plan activities to build community, especially when it involves partnering with other groups on campus.</tw-passagedata><tw-passagedata pid="7" name="Let&#39;s go" tags="" position="275,150" size="100,100">It&#39;s been a long time since you&#39;ve had to sit through an 8am class, but working part time just means you are clocking into work rather than sitting in a lecture hall when the sun rises. Between a laid-back manager, a comfy music playlist, and lots of free drinks, the gig isn&#39;t so bad. It&#39;s time to get dressed for the day. Are you going to wear pins on your apron today?
+[[Back|start]]</tw-passagedata><tw-passagedata pid="4" name="Riley" tags="" position="350,325" size="100,100">Riley is your best friend. They&#39;re also in [[GSP]], as the treasurer. You met in an intro biology class, and have been inseperable since. Riley now works with you at the coffee shop.
+[[Back|start]]</tw-passagedata><tw-passagedata pid="5" name="GSP" tags="" position="225,450" size="100,100">The Gay-Straight Partnership is one of the biggest clubs on campus. You really enjoy helping the club plan activities to build community, especially when it involves partnering with other groups on campus.
+[[Back|start]]</tw-passagedata><tw-passagedata pid="6" name="Let&#39;s go" tags="" position="275,150" size="100,100">There&#39;s a GSP board meeting today. You and Riley are going to meet with the rest of the board at the library.
 
-[[Of course. I don&#39;t go anywhere without them]]
-[[No pins today, just not feeling it]]</tw-passagedata><tw-passagedata pid="8" name="No pins today, just not feeling it" tags="" position="525,225" size="100,100">You skip the pins, but double check to make sure your nametag is one tight. [[Let&#39;s go to work|Let&#39;s go!]]</tw-passagedata><tw-passagedata pid="9" name="Of course. I don&#39;t go anywhere without them" tags="" position="650,100" size="100,100">You fasten on your pronouns pin right next to your name tag, and a rainbow skateboard pin on the other side of your apron. (set: $pins to true) [[Let&#39;s go!]]</tw-passagedata><tw-passagedata pid="10" name="Let&#39;s go!" tags="" position="650,225" size="100,100">The shift is easy enough. This early, most people are hoping to get in and out before work, leaving the cafe itself pretty empty. You&#39;re chatting Riley when a customer comes up to you frowning.
+When you get there, the president, Alex, and the vice president, Lin, are already set up. You chat for a minute before Alex looks down at his notes. 
 
-&quot;Young man, I specifically asked for a LARGE, and this is a MEDIUM. Fix it.&quot; They look up at you, brow furrowing. They study your face for a moment, and their look sours even more.  (if:$pins is true)[They look at your pronoun pin, then back at you. &quot;Are you a boy?&quot;]
+&quot;Top item on today&#39;s agenda: campus ministry would like to collaborate with us.&quot;
 
-Ignore it. [[&quot;Let me fix that for you.&quot;]]
-This has happened before. It&#39;s exhausting. [[Verbally correct them]]
-</tw-passagedata><tw-passagedata pid="11" name="Verbally correct them" tags="" position="775,350" size="100,100">&quot;I&#39;m nonbinary,&quot; you say. &quot;I use they/them pronouns.&quot;
-The customer stares for a moment. &quot;Well I&#39;ll pray for you to be guided out of temptation.&quot;
+You look around the table. Nobody seems particularly thrilled by the idea.
 
-The cusomter turns around and walks out.
-(set: $stress to 2)
-Riley looks to you. &quot;I&#39;m so sorry. Are you okay?&quot;
+[[Next|chooseEventStyle]]</tw-passagedata><tw-passagedata pid="7" name="&quot;Let&#39;s have a lecture&quot;" tags="" position="825,175" size="100,100">(set: $event to &quot;lecture&quot;)
+&quot;Sounds good.&quot; Lin says. (if: $reuse is &quot;false&quot;)[Maybe we should talk to some of the theology professors about queer inclusive theologies?&quot;
 
-[[&quot;Yeah, it&#39;s alright.&quot;]]
-[[&quot;It&#39;s just really upsetting.&quot;]]</tw-passagedata><tw-passagedata pid="12" name="&quot;Let me fix that for you.&quot;" tags="" position="650,350" size="100,100">You turn away, trying to keep a straight face as you make the drink. Riley starts chatting with the customer. You hand over the drink without another word. The customer looks at you suspiciously, then walks away.
+[[Next|&quot;Let&#39;s talk to the theology professors.&quot;]] ]
+(else:)[[&quot;Let&#39;s do it!&quot;]]</tw-passagedata><tw-passagedata pid="8" name="&quot;Let&#39;s host a panel&quot;" tags="" position="1175,300" size="100,100">(set: $event to &quot;panel&quot;)
+&quot;Sounds good.&quot; Lin says. (if: $reuse is &quot;false&quot;)[Maybe we should talk to some of the theology professors about queer inclusive theologies?&quot;
 
-Riley looks to you. &quot;I&#39;m so sorry. Are you okay?&quot;
-(set: $stress to 1)
+[[Next|&quot;Let&#39;s talk to the theology professors.&quot;]]]
+(else:)[[Riley looks at you. &quot;Is there anyone else we should talk to?&quot;]
 
-(if: $stress &gt; 0)[~~&quot;Yeah, it&#39;s alright.&quot;~~]
-[[&quot;It&#39;s just really upsetting.&quot;]]</tw-passagedata><tw-passagedata pid="13" name="Bad Time" tags="" position="900,625" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="Next" tags="" position="675,675" size="100,100"></tw-passagedata><tw-passagedata pid="15" name="&quot;It&#39;s just really upsetting.&quot;" tags="" position="525,475" size="100,100">&quot;I can&#39;t believe people still say things like that,&quot; Riley replies. 
-(set: $stress to it + 1)
-[[Next]]</tw-passagedata><tw-passagedata pid="16" name="&quot;Yeah, it&#39;s alright.&quot;" tags="" position="900,475" size="100,100"></tw-passagedata></tw-storydata>
+(if:$Farid is not true)[[Dr. Farid|&quot;I think we should talk to Dr. Farid.&quot;]]
+(if:$Garner is not true)[[Dr. Garner|Dr.Garner]]
+(if:$Osbourne is not true)[[Dr. Osbourne|&quot;I think we should talk to Dr. Osbourne.&quot;]]
+[[&quot;I think we&#39;re good. Let&#39;s make this happen.&quot;|host]]]</tw-passagedata><tw-passagedata pid="9" name="&quot;Do we have to have an emphasis on LGBTQ+ folx who are religous?&quot;" tags="" position="650,525" size="100,100">Lin shrugs. &quot;Not necessarily, we can guide the conversation. Maybe we could talk to some of the theology or history professors.&quot;
+
+[[&quot;You know, I&#39;m just not comfortable working on this event. I grew up Evangelical and didn&#39;t have the best experience with religion. I can support in other ways.&quot;]]
+[[&quot;Let&#39;s talk to the theology professors.&quot;]]
+[[&quot;Let&#39;s talk to the history professors.&quot;]]
+
+(set: $reuse to &quot;true&quot;)</tw-passagedata><tw-passagedata pid="10" name="&quot;Let&#39;s talk to the theology professors.&quot;" tags="" position="850,475" size="100,100">The next day, you and Riley walk over to the theology offices.
+
+Riley turns to you. &quot;I&#39;ve only had classes with a couple of these professors. Dr. Osbourne has a class on reading the Bible through different lenses. Dr. Farid had a great unit in my intro class on Christian sexual ethics and the sources that you can draw from.&quot;
+
+[[&quot;I think we should talk to Dr. Osbourne.&quot;]]
+[[&quot;I think we should talk to Dr. Farid.&quot;]]</tw-passagedata><tw-passagedata pid="11" name="&quot;Let&#39;s talk to the history professors.&quot;" tags="" position="375,625" size="100,100">Sophomore year, you took a general history class. Your professor, Dr. Garner, mentioned work she&#39;d done at the intersection of theology, gender studies, and history. Maybe she&#39;ll have some ideas for what to talk about at the event.
+
+[[Next|Dr.Garner]]</tw-passagedata><tw-passagedata pid="12" name="&quot;I think we should talk to Dr. Farid.&quot;" tags="" position="1225,600" size="100,100">You and Riley knock walk into Dr. Farid&#39;s office.
+
+&quot;What can I do for you two?&quot; He asks.
+
+&quot;Campus ministry is collaborating wtih GSP. We were looking for themes and ideas we could bring to it,&quot; Riley says. &quot;I was thinking about the unit we had about different sources for engaging with theology. Do you have any suggestions?&quot;
+
+[[Next|JustLove]]
+(set: $Farid to true)</tw-passagedata><tw-passagedata pid="13" name="&quot;I think we should talk to Dr. Osbourne.&quot;" tags="" position="800,700" size="100,100">You and Riley go to Dr. Osbourne&#39;s office.
+
+She smiles as you walk in. &quot;How&#39;s it going?&quot;
+
+&quot;Good!&quot; Riley starts. &quot;GSP and campus ministry are collaborating, and we were looking for different avenues to explore in terms of theological perspectives. I remembered we talked about reading the Bible from different lenses. I think one day we looked at the Bible as a narrative of desire?&quot;
+
+[[Next|Desire]]
+
+(set: $Osbourne to true)</tw-passagedata><tw-passagedata pid="14" name="JustLove" tags="" position="1650,775" size="100,100">(set: $source to &quot;JL&quot;)
+&quot;I think you&#39;re thinking of &#39;Just Love&#39; by Margaret Farley. She wrote about sources for theological ethics, specfically sexual ethics. She highlighted Scripture, tradition, secular disciplines, and contemporary experience. I can explain more if you&#39;d like.&quot;
+
+[[&quot;Can you talk more about Scripture?&quot;]]
+[[&quot;What do you mean by tradition?&quot;]]
+[[&quot;How do are secular disciplines involved?&quot;]]
+[[&quot;How would you use contemporary experience as a source?&quot;]]
+[[&quot;This would be great for the event.&quot;|ThanksProf]]</tw-passagedata><tw-passagedata pid="15" name="&quot;Can you talk more about Scripture?&quot;" tags="" position="1650,1025" size="100,100">“Farley notes that in the Bible, ‘justice in relation to human sexuality… is blurred.’ It should also be noted that God is often portrayed in ways the reinforce patriarchal standards when using the metaphor of marriage to Israel. But there is no clear moral instruction that doesn’t seem to have exceptions or be ‘culture-bound.’”
+[[&quot;I have another question.&quot;|JustLove]]
+</tw-passagedata><tw-passagedata pid="16" name="&quot;What do you mean by tradition?&quot;" tags="" position="1975,1075" size="100,100">“Farley writes about a ‘living tradition’ that shifts with culture, new experiences, and new perspectives. An example is how the Catholic church’s shifted its perspective of slavery. However, replacement requires new reasonings and beliefs. One must assume that ‘a community’s beliefs and moral insights through time not only are a fund of wisdom for each generation but are revelatory of God’s presence and action in the life of the community.’ This validates tradition as a key source to engage with, even if the tradition has developed since then. Most ethicists and theologians acknowledge that within Christian beliefs and moral codes on sexuality, there is room to develop.”
+[[&quot;I have another question.&quot;|JustLove]]
+</tw-passagedata><tw-passagedata pid="17" name="&quot;How do are secular disciplines involved?&quot;" tags="" position="1500,1050" size="100,100">&quot;When Farley references secular disciplines, she&#39;s talking about philosophy, biology, sociology, etc. These are sources that rely on human reasoning to make sense about the world.&quot;
+[[&quot;I have another question.&quot;|JustLove]]</tw-passagedata><tw-passagedata pid="18" name="&quot;How would you use contemporary experience as a source?&quot;" tags="" position="1800,1050" size="100,100">“Contemporary experience is complicated. You have to weigh conflicting experiences, and of course the question of what is authoritative. Farley’s main three questions on engaging with experiences are: What evidence does experience offer? What generalizations are possible? How does experience engage with the other sources previously discussed? Farley doesn’t necessarily have answers for these questions, but highlight that experiences are a valuable way for people who have not had direct experiences to ‘stand in solidarity’ with those who have had them.”
+[[&quot;I have another question.&quot;|JustLove]]</tw-passagedata><tw-passagedata pid="19" name="Desire" tags="" position="1000,800" size="100,100">&quot;Oh yes! We did have a day on looking at the Bible through the lens of desire. We looked at &#39;The Body&#39;s Grace&quot;&#39;by Rowan Williams and &#39;The Bible and Sex&#39; by David H. Jensen.]]
+
+[[&quot;What was &#39;The Body&#39;s Grace&#39; about?&quot;]]
+[[&quot;What was &#39;The Bible and Sex&#39; about?&quot;]]</tw-passagedata><tw-passagedata pid="20" name="&quot;What was &#39;The Body&#39;s Grace&#39; about?&quot;" tags="" position="1200,900" size="100,100">(set: $source to &quot;BG&quot;)
+Dr. Osbourne nods. &quot;Rowan Williams is a theologian, and was the Archbishop of Canterbury for about 10 years. &#39;The Body&#39;s Grace’ challenges the heteronormative ideas of sex. It argues that sex doesn’t need to be procreative (and thus not heterosexual). Rather, sex is how people are able to view themselves as objects of desire. In Christianity, ‘grace… is a transformation that depends in large part on knowing yourself to be seen in a certain way: as significant, as wanted.’ Humanity is the ‘object of the causeless loving delight of God.’ This is the language of grace that can be related back to sexual desire.
+Williams also acknowledges that while marriage at its best provides an opportunity for people to know and be known, it can be used to perpetuate violence. And in terms of non-procreative sex, the Bible often uses sexual metaphors ‘beyond biological reproduction.’ Hosea’s love for his wife is compared with the Lord’s love for the Israelites, which means equating God with a someone ‘at the mercy of the perceptions of an uncontrolled partner.’ Other Old Testament reflections on marriage point out that the bearing of children is not the deciding factor of love within a marriage, but sexual attraction is.
+Ultimately, Williams is providing the language of ‘the body’s grace’ in order to ground sexual ethic informed by the Bible.”
+[[&quot;I have another question.&quot;|JustLove]]
+[[&quot;This would be great for the event.&quot;|ThanksProf]]</tw-passagedata><tw-passagedata pid="21" name="&quot;What was &#39;The Bible and Sex&#39; about?&quot;" tags="" position="775,925" size="100,100">(set: $source to &quot;BS&quot;)
+“Jensen’s ‘The Bible and Sex’ argues that the Bible should be read as a narrative of desire, rather than as a guidebook for sex or tossed out as completely useless on the topic. He argues that God created humanity our of an abundance. That is, ‘God desires out of abundance and creates in order to share that abundance with all that is.’ The desire to create is out of delight. In fact, Jensen argues that the entire Bible is about relationships: ‘of creation’s relationship with God, of human persons’ relationships with one another; of God’s election of a nation for particular relationship with God in covenant and of the extension of that covenant to the world in Jesus Christ.’ God desires humanity, and sexual desire is one such expression of desire that may help people make sense of this framework. Even Jesus is an object of desire, as people reach out to Him, touch Him, in order to be healed. The act of communion is also about desire, it is about taste and consumption in one sense, and about Jesus’ desire for the one taking communion.
+“And though Revelations is complicated, ‘queer things’ are accomplished when ‘the faithful, both male and female’ are ‘brides of Christ.’ Meanwhile, Song of Songs may be one of the more explicit ways of understanding desire in the Bible. God desires humanity the way the lovers in Song of Songs desire one another.&quot;
+[[&quot;I have another question.&quot;|Desire]]
+[[&quot;This would be great for the event.&quot;|ThanksProf]]</tw-passagedata><tw-passagedata pid="22" name="Dr.Garner" tags="" position="200,750" size="100,100">You and Riley walk into Dr. Garner&#39;s office. &quot;Hi!&quot;
+
+You smile. &quot;Hi, Dr. Garner. GSP and campus ministry are collaborating, and we wanted to see if you had any insight for topics we could talk about. I remember you mentioned working on something with history, gender studies, and theology?&quot;
+
+&quot;Yes!&quot; Dr. Garner says. &quot;Do you want to talk about Christian history and gender studies, or about the bifurcation of the sexes over time?&quot;
+
+[[&quot;What about Christian history and gender studies?&quot;]]
+[[&quot;What do you mean &#39;bifurcation?&#39;&quot;]]
+
+(set: $Garner to true)</tw-passagedata><tw-passagedata pid="23" name="&quot;What about Christian history and gender studies?&quot;" tags="" position="475,900" size="100,100">(set: $source to &quot;CH&quot;)
+“Elizabeth Clark argues the important of women and gender studies in ‘Women, Gender, and the Study of Christian History.’ Basically, she believes that both women studies and gender studies in religion have two different approaches when it comes to their practices. Women studies in relation to Christianity tends to take on a historical perspective. Arguments and research within this framework have been broad, ranging from house churches, women’s bodies, turning points for women’s inclusion in the church—like the Gregorian Reform—and even research into analyzing the idea of “debasement” of initially pure and egalitarian teachings.
+“Meanwhile, gender in relation to Christian history is often examined the way texts are examined in literature. Gender is generally accepted as a social construct, and the focus is on the language, meaning, and rhetoric around women, rather than strictly history and periods. Gender studies also includes the study of men and religion.
+“She sees the overlap of women’s history and gender history in the study of women as heretics. This, she argues, is where the real experiences of women are highlighted, and where women become representative of something in relation to society. For example, when speaking about the witch craze, it is known that this was the real experience of women. However, women were also being used to ‘shore up ‘orthodoxy’’ during this time. Ultimately, she sees value in both gender and women’s studies in church history, they simply do different things.”
+[[&quot;I have another question.&quot;|Dr.Garner]]
+[[&quot;This would be great for the event.&quot;|ThanksProf]]</tw-passagedata><tw-passagedata pid="24" name="&quot;What do you mean &#39;bifurcation?&#39;&quot;" tags="" position="125,1050" size="100,100">(set: $source to &quot;AM&quot;)
+&quot;Well, in ‘Theological Amnesia and Same-Sex Love,’ theologian Adrian Thatcher argues that &#39;the idea of modern sexes is a modern assumption.&#39; That is, the Greeks initially saw gender as continuum. They theorized about a single sex, men. Women were viewed as underdeveloped men. This contributed to the societal norms of women being inferior to men. The &#39;two-sex&#39; ideology didn&#39;t come around until the late 17th century. But, since women were now viewed as a different sex, the idea that women were lesser because they were underdeveloped men could no longer stand. Around this time, philosophies surround natural rights were being developed. These philosophies, focused on the soul, could be used to show that women had the same fundamental rights as men. Thus, a new ideology to preserve the patriarchy was developed was developed. Women’s bodies were considered fundamentally and entirely different than men, in order to preserve the status quo, or avoid equal rights.
+“In fact, lots of one-sex theory remnants can be seen in various theological sources, like Vatican documents and liturgy. The male pronouns ‘he,’ ‘him,’ and ‘his,’ were inclusive of women and children when they were written, as everyone existed on this one-sex spectrum.
+“Also interesting, the term ‘complimentary’ wasn’t even seen in Catholic writings until 1981. This doctrine is what many see as contributing to the marginalization of LGBTQ+ individuals today. The Roman Catholic church in particular uses what Thatcher calls a ‘modern mix’ of theories. One-sex theory is the basis behind not ordaining women, but two-sex theory is used for granting everyone inherent dignity.
+“He ascribes most of this change to ‘repetitive consolidation’ of the two-sex theory. He also criticizes how sex has become a characteristic that determines one’s existence, status, and opportunities. Ultimately, he calls for a circular continuum of male to female, or vice versa, sexual spectrum, comparing the boundaries to how the sun rises and sets.
+“And this is before he goes into the relationship between gender and the divine. He ends the chapter by talking about how the divine, specifically Jesus, has a ‘human nature,’ not a male or female one.”
+
+[[&quot;I have another question.&quot;|Dr.Garner]]
+[[&quot;This would be great for the event.&quot;|ThanksProf]]</tw-passagedata><tw-passagedata pid="25" name="EventStyle" tags="" position="1400,125" size="100,100">Riley looks to you. &quot;Now that we have a direction, what style of event should we have?&quot;
+
+[[&quot;Let&#39;s host a panel&quot;]]
+[[&quot;Let&#39;s have a lecture&quot;]]</tw-passagedata><tw-passagedata pid="26" name="&quot;Let&#39;s do it!&quot;" tags="" position="1450,400" size="100,100">Now that you have a style and topic, it&#39;s time to actually host the event.
+
+[[Next|host]]</tw-passagedata><tw-passagedata pid="27" name="host" tags="" position="2075,250" size="100,100">The event is a success.
+(if: $event is &quot;panel&quot;)[The panel is fantastic. You introduce a member of campus ministry, as well as the rest of the panel. (if:$Farid is true)[Dr. Farid talks about the sources for Christian sexual ethics, and hints at hosting another event that highlight the experiences of LGBTQ+ Christians. He highlights that no source is a complete answer in it of itself, and that each one is important in the conversation if there&#39;s truly going to be a conversation.](if:$Garner is true)[Dr. Garner goes in depth on how women and gender studies can be applied when looking at the history of Christianity. She talks about how Christianity has seen a shift from one-sex to two-sex to complementarianism. She argues that this shift demonstrates another layer of complexity when it comes to LGBTQ+ topics and Christianity, and suggests that women and genders studies may allow for further exploration.](if:$Osbourne is true)[Dr. Osbourne explains how the Bible can be read as a narrative of desire. She explains how sex is one such paradigm for desire, and goes through Jensen&#39;s explanation of sexual desire in the Bible. She also talks about Rowan Williams, and how the idea of &quot;grace&quot; can be extended to knowing and being known in sexual relationships. She mentions that these frameworks challenge the procreative notion of sex, and open conversations into LGBTQ+ inclusion.]]
+
+(if: $event is &quot;lecture&quot;)[The lecture is fantastic. Riley, Lin, and Alex are all there to cheer you on as you introduce (if:$Farid is true)[Dr. Farid talks about the sources for Christian sexual ethics, and hints at hosting another event that highlight the experiences of LGBTQ+ Christians. He highlights that no source is a complete answer in it of itself, and that each one is important in the conversation if there&#39;s truly going to be a conversation.](if:$Garner is true)[Dr. Garner goes in depth on how women and gender studies can be applied when looking at the history of Christianity. She talks about how Christianity has seen a shift from one-sex to two-sex to complementarianism. She argues that this shift demonstrates another layer of complexity when it comes to LGBTQ+ topics and Christianity, and suggests that women and genders studies may allow for further exploration.](if:$Osbourne is true)[Dr. Osbourne explains how the Bible can be read as a narrative of desire. She explains how sex is one such paradigm for desire, and goes through Jensen&#39;s explanation of sexual desire in the Bible. She also talks about Rowan Williams, and how the idea of &quot;grace&quot; can be extended to knowing and being known in sexual relationships. She mentions that these frameworks challenge the procreative notion of sex, and open conversations into LGBTQ+ inclusion.]]
+Thank you so much for playing! I hope you found this an interesting and engaging way to learn about LGBTQ+ inclusive pathways in theology. Click [[here|start]] to go back to the start.</tw-passagedata><tw-passagedata pid="28" name="ThanksProf" tags="" position="550,1300" size="100,100">&quot;Thank you so much for your time. I think we could really explore this avenue.&quot;
+
+(if: $event is &quot;panel&quot;)[[&quot;Would you be interested in joining the panel for the event?&quot;]]
+(if: $event is &quot;lecture&quot;)[[&quot;Would you be interested in being the lecturer for the event?&quot;]]
+(if: $event is 0)[[&quot;What&#39;s next?|EventStyle]]</tw-passagedata><tw-passagedata pid="29" name="&quot;Would you be interested in joining the panel for the event?&quot;" tags="" position="875,1400" size="100,100">The professor smiles at you. &quot;I&#39;d be honored!&quot;
+
+Riley looks at you. &quot;Is there anyone else we should talk to?&quot;
+
+(if:$Farid is not true)[[Dr. Farid|&quot;I think we should talk to Dr. Farid.&quot;]]
+(if:$Garner is not true)[[Dr. Garner|Dr.Garner]]
+(if:$Osbourne is not true)[[Dr. Osbourne|&quot;I think we should talk to Dr. Osbourne.&quot;]]
+[[&quot;I think we&#39;re good. Let&#39;s make this happen.&quot;|host]]</tw-passagedata><tw-passagedata pid="30" name="&quot;Would you be interested in being the lecturer for the event?&quot;" tags="" position="1100,1325" size="100,100">The professor smiles at you. &quot;I&#39;d be honored!&quot;
+
+[[Let&#39;s make this happen.|host]]</tw-passagedata><tw-passagedata pid="31" name="chooseEventStyle" tags="" position="550,275" size="100,100">Alex looks at you. &quot;Taylor, since you normally lead events, how do you want to do this?&quot;
+
+[[&quot;Let&#39;s host a panel&quot;]]
+[[&quot;Let&#39;s have a lecture&quot;]]
+[[&quot;Do we have to have an emphasis on LGBTQ+ folx who are religous?&quot;]]
+
+(set: $reuse to &quot;false&quot;)</tw-passagedata><tw-passagedata pid="32" name="&quot;You know, I&#39;m just not comfortable working on this event. I grew up Evangelical and didn&#39;t have the best experience with religion. I can support in other ways.&quot;" tags="" position="600,725" size="100,100">Riley nods. &quot;Thanks for telling us. We can handle it.&quot;
+
+Alex smiles. &quot;Next order of business...&quot;
+
+It&#39;s important to know the difference between material that challenges you and material that triggers you. It&#39;s perfectly valid to step back when you need to.
+
+If you&#39;d like to end here, enjoy your day!
+
+If you want to make a different choice, [[click here|&quot;Do we have to have an emphasis on LGBTQ+ folx who are religous?&quot;]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
